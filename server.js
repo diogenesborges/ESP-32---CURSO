@@ -16,7 +16,7 @@ app.use('/api', api) // Isso significa que as rotas dentro de 'rotas' (incluindo
 // ******************************************************************
 // **** MUDANÇA AQUI: Puxando a porta do .env ou usando 3000 como padrão ****
 // ******************************************************************
-const PORT = process.env.PORT || 3000; // Puxa do .env ou usa 3000 se não estiver definido
+const PORT = process.env.PORT || 3080; // Puxa do .env ou usa 3000 se não estiver definido cls
 // ******************************************************************
 // **** FIM DA MUDANÇA ****
 // ******************************************************************
@@ -24,7 +24,7 @@ const PORT = process.env.PORT || 3000; // Puxa do .env ou usa 3000 se não estiv
 console.log("Variável MONGO_CONNECT do .env:", process.env.MONGO_CONNECT);
 
 
-app.get('/', (req,res)=>{
+app.get('/', (req,res)=>{  
     res.json({
         success: true
     })
